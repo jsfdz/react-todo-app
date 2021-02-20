@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react"
 import { TodoItem } from "./TodoItem";
 import { CreateTodo } from './CreateTodo'
 import { get, remove, update } from "../services/Api"
-import { Svg } from "./Svg";
+/* import { Svg } from "./Svg"; */
 
 export const
     TodoContainer = () => {
@@ -33,11 +33,17 @@ export const
 
         return (
             <>
-                <CreateTodo
+                <div className="form-container">
+                    <CreateTodo
                     retriveTask={retriveTask}
-                />
-                <div className='todo-list'>
-                    <Svg />
+                    />
+                </div>
+                
+                <div className="task-container">
+                    <div className="list-task">
+                        <p>Tasks to do</p>
+                    </div>
+                    {/* <Svg /> */}
                     {tasks &&
                         tasks.map(task =>
                         (

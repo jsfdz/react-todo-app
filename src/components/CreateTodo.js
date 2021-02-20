@@ -1,7 +1,7 @@
 import React from 'react'
 import { useForm } from 'react-hook-form'
 import { create } from "../services/Api"
-import '../scss/CreateTodo.scss'
+/* import '../scss/CreateTodo.scss' */
 
 export const
     CreateTodo = ({ retriveTask }) => {
@@ -15,37 +15,32 @@ export const
         }
 
         return (
-            <form onSubmit={handleSubmit(onSubmit)} className='submit-form'>
-                <div className='todo-list'>
-                    <div className='file-input'>
-                        <input
-                            type='text'
-                            className='student'
-                            name='student'
-                            ref={register({ required: true })}
-                            placeholder='write your name'
-                            required
-                        />
-                    </div>
+            <form onSubmit={handleSubmit(onSubmit)}>
+                <div className="input-container">
+                    <label htmlFor="name">Assign to:</label>
+                    <input
+                        type='text'
+                        name='student'
+                        id='student'
+                        ref={register({ required: true })}
+                        placeholder='Name who will do the homework'
+                    />
+                    {errors.student && <p className="error-msg">This is required</p>}
                 </div>
-                {errors.student && <p className='error-msg'>This is required</p>}
-
-                <div className='todo-list'>
-                    <div className='file-input'>
-                        <input
-                            type='text'
-                            className='task'
-                            name='task'
-                            ref={register({ required: true })}
-                            placeholder='write task'
-                        />
-                        <button className='button pink'>
-                            Add
-                        </button>
-                    </div>
+                <div className="input-container description">
+                    <label htmlFor="task">Task to be assigned:</label>
+                    <input
+                        type='text'
+                        name='task'
+                        id='task'
+                        ref={register({ required: true })}
+                        placeholder='Write the task to assign'
+                    />
+                    {errors.task && <p className='error-msg'>This is required</p>}
                 </div>
-                {errors.task && <p className='error-msg'>This is required</p>}
-
+                <div className="btn-container">
+                    <button>Add</button>
+                </div>
             </form>
         )
     }

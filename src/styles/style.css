@@ -1,0 +1,236 @@
+/* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+/* Fonts */
+/* Colors */
+/* Colors */
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background: #d8d8d8;
+}
+
+.App {
+  width: 80%;
+  margin: auto;
+}
+
+.form-container form {
+  background: #f0f0f0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-shadow: -1px 10px 20px rgba(151, 151, 151, 0.534);
+          box-shadow: -1px 10px 20px rgba(151, 151, 151, 0.534);
+  margin: 30px auto;
+  padding: 10px;
+  border-radius: 6px;
+  width: 80%;
+}
+
+.input-container {
+  margin: 8px;
+}
+
+.input-container label {
+  padding: 5px;
+  color: #535353;
+  font-weight: 600;
+}
+
+.input-container input {
+  border: none;
+  width: 100%;
+  padding: 5px;
+  border-radius: 3px;
+  outline: none;
+  color: #292929;
+  background: #dadada;
+}
+
+.description {
+  width: 60%;
+}
+
+@media (max-width: 708px) {
+  .description {
+    width: 100%;
+  }
+}
+
+.btn-container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.btn-container button {
+  padding: 5px 18px;
+  margin: 10px;
+  background: #1382dd;
+  border: none;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.error-msg {
+  text-align: center;
+  background: #ff9191;
+  color: #f72626;
+  font-size: 15px;
+  font-style: italic;
+  width: 100%;
+  max-width: 170px;
+  margin: 10px auto;
+  padding: 8px;
+  -webkit-box-shadow: 0 5px 30px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 5px 30px rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+}
+
+.list-task {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.list-task p {
+  margin-bottom: 20px;
+  font-weight: 800;
+  font-size: 2rem;
+  color: #2c2c2c;
+  border-bottom: solid 4px #04961d;
+}
+
+.task {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: #f0f0f0;
+  padding: 18px 10px;
+  -webkit-box-shadow: -1px 10px 20px rgba(151, 151, 151, 0.534);
+          box-shadow: -1px 10px 20px rgba(151, 151, 151, 0.534);
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+
+.task-description {
+  width: 80%;
+}
+
+.task-description p {
+  padding: 5px 10px;
+  font-weight: 600;
+  color: #1382dd;
+}
+
+.task-description p + p {
+  color: #3b3b3b;
+  font-weight: 500;
+}
+
+@media (max-width: 440px) {
+  .task-description {
+    width: 90%;
+  }
+}
+
+.task-options {
+  width: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.task-options div {
+  width: 50%;
+}
+
+.task-options div input[type="checkbox"] {
+  outline: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  height: 25px;
+  width: 25px;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.task-options div input[type="checkbox"]:after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f024";
+  font-size: 20px;
+  color: #f72626;
+}
+
+.task-options div input[type="checkbox"]:checked:after {
+  border-radius: 3px;
+  background: #04961d;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f00c";
+  font-size: 20px;
+  color: white;
+}
+
+.task-options div i {
+  font-size: 22px;
+  color: #f72626;
+  cursor: pointer;
+  padding: 10px 5px;
+}
+
+@media (max-width: 440px) {
+  .task-options {
+    width: 10%;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .task-options div {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.completed {
+  text-decoration: line-through;
+}
+/*# sourceMappingURL=style.css.map */

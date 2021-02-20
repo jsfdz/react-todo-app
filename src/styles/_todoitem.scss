@@ -1,0 +1,93 @@
+.list-task {
+  display: flex;
+  justify-content: center;
+  p {
+    margin-bottom: 20px;
+    font-weight: 800;
+    font-size: 2rem;
+    color: rgb(44, 44, 44);
+    border-bottom: solid 4px $bgPositive;
+  }
+}
+
+.task {
+  display: flex;
+  background: $bgBody;
+  padding: 18px 10px;
+  box-shadow: -1px 10px 20px rgba(151, 151, 151, 0.534);
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+
+.task-description {
+  width: 80%;
+  p {
+    padding: 5px 10px;
+    font-weight: 600;
+    color: $bgPrimary;
+  }
+  p + p {
+    color: #3b3b3b;
+    font-weight: 500;
+  }
+  @media (max-width: 440px) {
+    width: 90%;
+  }
+}
+
+.task-options {
+  width: 20%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  div {
+    width: 50%;
+  }
+  div {
+    input[type="checkbox"] {
+      outline: none;
+      appearance: none;
+      height: 25px;
+      width: 25px;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      &:after {
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        content: "\f024";
+        font-size: 20px;
+        color: $bgError;
+      }
+      &:checked:after {
+        border-radius: 3px;
+        background: $bgPositive;
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        content: "\f00c";
+        font-size: 20px;
+        color: white;
+      }
+    }
+    i {
+      font-size: 22px;
+      color: $bgError;
+      cursor: pointer;
+      padding: 10px 5px;
+    }
+  }
+  @media (max-width: 440px) {
+    width: 10%;
+    flex-wrap: wrap;
+    div {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
+
+.completed {
+  text-decoration: line-through;
+}

@@ -1,0 +1,31 @@
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+html {
+  background: #ddd;
+  height: 100%;
+  display: flex;
+}
+
+body {
+  width: 100%;
+  margin: auto;
+}
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.todo-list {
+  background: #fff;
+  font-size: 15px;
+  max-width: 300px;
+  margin: auto;
+  margin-bottom: 20px;
+  padding: 8px 16px;
+  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.2);
+}

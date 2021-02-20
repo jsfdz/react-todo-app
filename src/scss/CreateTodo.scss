@@ -1,0 +1,35 @@
+@import './Button.scss';
+
+$background: #f8f8f8;
+
+.file-input {
+  padding: 2px;
+  background: $background;
+}
+
+.file-input > .task,
+.file-input > .student {
+  outline: none;
+  padding: 0px 10px;
+  font-size: 15px;
+  width: auto;
+  height: 46px;
+  background: transparent;
+  border: 0px solid;
+}
+
+.file-input > .student {
+  width: 276px;
+}
+
+.error-msg {
+  background: #ff9191;
+  color: #a20000;
+  font-size: 15px;
+  font-style: italic;
+  max-width: 300px;
+  margin: auto;
+  margin-bottom: 20px;
+  padding: 8px 16px;
+  box-shadow: 0 5px 30px rgb(0 0 0 / 20%);
+}

@@ -1,6 +1,6 @@
 # To-do App
 
-Estas nuestro proyecto [To-do App](https://todo-fzdh.netlify.app/), realizada en React Js.
+Estas nuestro proyecto [To-do App](https://react-todo-app-jsdnh.netlify.app/), realizada en React Js.
 
 ## Available Scripts
 
